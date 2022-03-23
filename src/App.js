@@ -1,10 +1,15 @@
 import "./App.css";
+import Input from "./components/Input";
+import { Provider } from "react-redux";
+import todoSlice from "./features/todoSlice";
 
 function App() {
   return (
-    <div>
-      Hello from <a href="https://www.lereacteur.io">Le Reacteur !</a>
-    </div>
+    <Provider todoSlice={todoSlice}>
+      <div className="App">
+        <Input />
+      </div>
+    </Provider>
   );
 }
 
